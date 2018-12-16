@@ -19,6 +19,23 @@ This package is built on
 - Microsoft.ApplicationInsights 2.8.1
 - Newtonsoft.Json 12.0.1
 
+### Setup
+
+1. Add `RequestLogActionFilterAttribute` filter in the MVC pipeline.
+```
+services.AddMvc(options =>
+ {
+       options.Filters.Add<RequestLogActionFilterAttribute>();
+ });
+```
+
+2. Register the `PIITelemetryInitializer`
+
+```
+services.AddSingleton<ITelemetryInitializer, PIITelemetryInitializer>();
+```
+
+
 ### Sample Application
 The repository contains a sample application to demostrate the usage of `ApplicationInsights.Extension.RequestLogging`.
 ![Application Insights](./ApplicationInsightsRequetJsonBody.jpg)
