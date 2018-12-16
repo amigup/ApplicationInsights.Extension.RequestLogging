@@ -1,7 +1,11 @@
+[![Build Status](https://dev.azure.com/amigup/amigup/_apis/build/status/amigup.ApplicationInsights.Extension.RequestLogging)](https://dev.azure.com/amigup/amigup/_apis/build/status/amigup.ApplicationInsights.Extension.RequestLogging)
+
 ---
 platforms: ASP.NET Core 2.2 Web API, Application Insights
 author: amigup
 ---
+
+
 
 # ApplicationInsights.Extension.RequestLogging
 Implements to log Request Body in application insights after removing the sensitive information.
