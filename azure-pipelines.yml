@@ -26,5 +26,6 @@ steps:
     command: push
     nuGetFeedType: external
     publishFeedCredentials: 'Nuget-ApplicationInsights.Extension.RequestLogging'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
     versioningScheme: byEnvVar
     versionEnvVar: version
