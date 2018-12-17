@@ -24,7 +24,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: push
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
+    packagesToPush: 'src/ApplicationInsights.Extension.RequestLogging/**/*.nupkg'
     nuGetFeedType: external
     publishFeedCredentials: 'Nuget-ApplicationInsights.Extension.RequestLogging'
     verbosityPush: 'Detailed'
