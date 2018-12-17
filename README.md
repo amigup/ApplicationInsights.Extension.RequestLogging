@@ -8,6 +8,8 @@ Implements to log Request Body in application insights after removing the sensit
 
 [![Build Status](https://dev.azure.com/amigup/amigup/_apis/build/status/amigup.ApplicationInsights.Extension.RequestLogging)](https://dev.azure.com/amigup/amigup/_apis/build/status/amigup.ApplicationInsights.Extension.RequestLogging)
 
+[![package Status](https://img.shields.io/nuget/v/ApplicationInsights.Extension.RequestLogging.svg?style=flat)](https://img.shields.io/nuget/v/ApplicationInsights.Extension.RequestLogging.svg?style=flat)
+
 Download the package from [nuget.org](https://www.nuget.org/packages/ApplicationInsights.Extension.RequestLogging)
 
 ### Scenario
