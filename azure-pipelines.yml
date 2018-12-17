@@ -11,6 +11,9 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  Major: '1'
+  Minor: '0'
+  Patch: '0'
 
 steps:
 - task: DotNetCoreInstaller@0
@@ -22,7 +25,10 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: pack
-    versioningScheme: byBuildNumber
+    versioningScheme: byPrereleaseNumber
+    majorVersion: '$(Major)'
+    minorVersion: '$(Minor)'
+    patchVersion: '$(Patch)'
     packagesToPack: 'src/ApplicationInsights.Extension.RequestLogging/*.csproj'
 - task: NuGetCommand@2
   inputs:
