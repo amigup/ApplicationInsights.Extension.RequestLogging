@@ -8,6 +8,8 @@ Implements to log Request Body in application insights after removing the sensit
 
 [![Build Status](https://dev.azure.com/amigup/amigup/_apis/build/status/amigup.ApplicationInsights.Extension.RequestLogging)](https://dev.azure.com/amigup/amigup/_apis/build/status/amigup.ApplicationInsights.Extension.RequestLogging)
 
+Download the package from [nuget.org](https://www.nuget.org/packages/ApplicationInsights.Extension.RequestLogging)
+
 ### Scenario
 
 You want to log the Request Body in application Insights after removing the sensitive information so that in Appliation Insights the request body payload can be viewed.
