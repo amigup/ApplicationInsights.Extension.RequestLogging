@@ -23,9 +23,6 @@ steps:
   inputs:
     command: pack
     versioningScheme: byBuildNumber
-    majorVersion: '$(Major)'
-    minorVersion: '$(Minor)'
-    patchVersion: '$(Patch)'
     packagesToPack: 'src/ApplicationInsights.Extension.RequestLogging/*.csproj'
 - task: NuGetCommand@2
   inputs:
