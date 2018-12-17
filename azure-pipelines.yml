@@ -20,11 +20,11 @@ steps:
     version: 2.2.100
 - script: dotnet build src/ApplicationInsights.Extension.RequestLogging.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- script: dotnet pack src/ApplicationInsights.Extension.RequestLogging/ApplicationInsights.Extension.RequestLogging.csproj --configuration $(buildConfiguration) /p:PackageVersion=$(version)
-- task: NuGetCommand@2
-  inputs:
-    command: push
-    packagesToPush: 'src/ApplicationInsights.Extension.RequestLogging/**/*.nupkg'
-    nuGetFeedType: external
-    publishFeedCredentials: 'Nuget-ApplicationInsights.Extension.RequestLogging'
-    verbosityPush: 'Detailed'
+# - script: dotnet pack src/ApplicationInsights.Extension.RequestLogging/ApplicationInsights.Extension.RequestLogging.csproj --configuration $(buildConfiguration) /p:PackageVersion=$(version)
+# - task: NuGetCommand@2
+#   inputs:
+#     command: push
+#     packagesToPush: 'src/ApplicationInsights.Extension.RequestLogging/**/*.nupkg'
+#     nuGetFeedType: external
+#     publishFeedCredentials: 'Nuget-ApplicationInsights.Extension.RequestLogging'
+#     verbosityPush: 'Detailed'
