@@ -22,17 +22,3 @@ steps:
     version: 2.2.100
 - script: dotnet build src/ApplicationInsights.Extension.RequestLogging.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-- task: NuGetCommand@2
-  inputs:
-    command: pack
-    versioningScheme: byPrereleaseNumber
-    majorVersion: '$(Major)'
-    minorVersion: '$(Minor)'
-    patchVersion: '$(Patch)'
-    packagesToPack: 'src/ApplicationInsights.Extension.RequestLogging/*.csproj'
-- task: NuGetCommand@2
-  inputs:
-    command: push
-    nuGetFeedType: external
-    publishFeedCredentials: 'Nuget-ApplicationInsights.Extension.RequestLogging'
-    versioningScheme: byBuildNumber
