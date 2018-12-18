@@ -38,7 +38,53 @@ services.AddMvc(options =>
 ```
 services.AddSingleton<ITelemetryInitializer, PIITelemetryInitializer>();
 ```
+### How to use
 
+You can attach `PII` attribute over Properties, Class and Action method parameter.
+
+#### Property
+
+If `PII` attribute is attached over property then in Application Insights request log the actual value is substituted by `PII Data` string literal.
+
+```
+    public class User
+    {
+        [PII]
+        public string Id { get; set; }
+
+        public string Name { get; set; }
+
+        public DateTime AnneviseryDate { get; set; }
+
+        [PII]
+        public int LinkId { get; set; }
+
+        public List<Address> Addresses { get; set; }
+    }
+```
+
+#### Class
+
+If `PII` attribute is attached over class then object is not logged in Application Insights request log.
+
+```
+    [PII]
+    public class User
+    {
+        
+    }
+```
+
+#### Action method parameter
+
+If `PII` attribute is attached over parameter then object is not logged in Application Insights request log.
+
+```
+        [HttpPost]
+        public void Post([FromBody, PII] User user)
+        {
+        }
+```
 
 ### Sample Application
 The repository contains a sample application to demostrate the usage of `ApplicationInsights.Extension.RequestLogging`.
