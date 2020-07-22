@@ -37,7 +37,7 @@ namespace ApplicationInsights.Extension.RequestLogging.Filters
                     logBuilder.AppendLine($"key: {argument.Key}; value : {serializedModel}");
                 }
 
-                var telemetry = this.httpContextAccessor.HttpContext.Items[Constants.ApplicationInsightsExtensionRequestLoggingKey] as RequestTelemetry;
+                var telemetry = this.httpContextAccessor.HttpContext.Features.Get<RequestTelemetry>();
                 if (telemetry != null)
                 {
                     telemetry.Context.GlobalProperties.Add(Constants.RequestBody, logBuilder.ToString());

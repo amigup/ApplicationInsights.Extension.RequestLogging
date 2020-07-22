@@ -33,18 +33,13 @@ services.AddMvc(options =>
  });
 ```
 
-2. Register the `PIITelemetryInitializer`
-
-```
-services.AddSingleton<ITelemetryInitializer, PIITelemetryInitializer>();
-```
 ### How to use
 
-You can attach `PII` attribute over Properties, Class and Action method parameter.
+You can attach `PII` attribute over Properties, Class and Action method parameters.
 
 #### Property
 
-If `PII` attribute is attached over property then in Application Insights request log the actual value is substituted by `PII Data` string literal.
+If `PII` attribute is attached over property then in Application Insights request log, the actual value is substituted with `PII Data` string literal.
 
 ```
     public class User
